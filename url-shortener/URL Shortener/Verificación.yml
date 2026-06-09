@@ -1,0 +1,22 @@
+info:
+  name: Verificación
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: http://localhost:3000/api/auth/verify
+  body:
+    type: json
+    data: |-
+      {
+        "email": "juan@correo.com",
+        "code": "G_QURS"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
